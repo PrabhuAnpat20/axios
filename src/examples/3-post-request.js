@@ -8,7 +8,14 @@ const PostRequest = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(name, email);
+    // console.log(name, email);
+    try {
+      const res=axios.post(url,{name,email})
+      console.log(res)
+    } catch (error) {
+      console.log(error.response)
+    }
+
   };
 
   return (
